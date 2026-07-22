@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+:root {
+  --cm-bg: #10121b;
+  --cm-panel: #181b27;
+  --cm-ink: #edeef2;
+  --cm-ink-soft: #9296aa;
+  --cm-ink-on-mint: #0a2318;
+  --cm-mint: #4ade9b;
+  --cm-amber: #f5b942;
+  --cm-coral: #ff6b6b;
+  --cm-ice: #2a2e3d;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cm-bg);
+  color: var(--cm-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.cm-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: var(--cm-ink);
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.cm-btn:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cm-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cm-btn-primary {
+  background: var(--cm-mint);
+  color: var(--cm-ink-on-mint);
+  border-color: var(--cm-mint);
+  font-weight: 600;
+}
+
+.cm-btn-primary:hover:not(:disabled) {
+  background: var(--cm-mint);
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--cm-mint);
+  outline-offset: 2px;
+}
