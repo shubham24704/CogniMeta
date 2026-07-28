@@ -6,6 +6,7 @@ interface Props {
   intuition: string;
   comparisons: number;
   swaps: number;
+  swapsLabel?: string;
 }
 
 function Row({ label, value }: { label: string; value: string }) {
@@ -17,8 +18,8 @@ function Row({ label, value }: { label: string; value: string }) {
   );
 }
 
-export function ComplexityPanel({ best, average, worst, space, intuition, comparisons, swaps }: Props) {
-  return (
+export function ComplexityPanel({ best, average, worst, space, intuition, comparisons, swaps, swapsLabel = "Swaps so far" }: Props) {
+    return (
     <div className="rounded-2xl border border-white/10 bg-[var(--cm-panel)] p-5">
       <h3 className="text-sm font-semibold tracking-wide text-[var(--cm-ink)] mb-2">Complexity</h3>
       <Row label="Best case" value={best} />
@@ -28,7 +29,7 @@ export function ComplexityPanel({ best, average, worst, space, intuition, compar
       <p className="text-xs text-[var(--cm-ink-soft)] mt-3 leading-relaxed">{intuition}</p>
       <div className="mt-3 flex gap-4 text-xs text-[var(--cm-ink-soft)]">
         <span>Comparisons so far: <strong className="text-[var(--cm-ink)]">{comparisons}</strong></span>
-        <span>Swaps so far: <strong className="text-[var(--cm-ink)]">{swaps}</strong></span>
+        <span>{swapsLabel}: <strong className="text-[var(--cm-ink)]">{swaps}</strong></span>
       </div>
     </div>
   );
