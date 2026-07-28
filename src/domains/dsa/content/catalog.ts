@@ -19,7 +19,7 @@ export const dsaCatalog: CategoryEntry[] = [
       "Arrange elements into order. Every sorting algorithm makes a different trade-off between speed, memory, and stability — watching them side by side is the fastest way to feel that difference.",
     algorithms: [
       { slug: "bubble-sort", title: "Bubble Sort", live: true },
-      { slug: "insertion-sort", title: "Insertion Sort", live: false },
+      { slug: "insertion-sort", title: "Insertion Sort", live: true },
       { slug: "selection-sort", title: "Selection Sort", live: false },
       { slug: "merge-sort", title: "Merge Sort", live: false },
       { slug: "quick-sort", title: "Quick Sort", live: false },
