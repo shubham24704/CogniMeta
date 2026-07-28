@@ -20,7 +20,7 @@ export const dsaCatalog: CategoryEntry[] = [
     algorithms: [
       { slug: "bubble-sort", title: "Bubble Sort", live: true },
       { slug: "insertion-sort", title: "Insertion Sort", live: true },
-      { slug: "selection-sort", title: "Selection Sort", live: false },
+      { slug: "selection-sort", title: "Selection Sort", live: true },
       { slug: "merge-sort", title: "Merge Sort", live: false },
       { slug: "quick-sort", title: "Quick Sort", live: false },
       { slug: "heap-sort", title: "Heap Sort", live: false },

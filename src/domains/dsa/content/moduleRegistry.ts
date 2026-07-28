@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { BubbleSortModule } from "../modules/BubbleSortModule";
 import { InsertionSortModule } from "../modules/InsertionSortModule";
+import { SelectionSortModule } from "../modules/SelectionSortModule";
 
 /**
  * Central lookup so routing stays generic (/learn/:category/:algorithm)
@@ -10,4 +11,5 @@ import { InsertionSortModule } from "../modules/InsertionSortModule";
 export const moduleRegistry: Record<string, ComponentType> = {
   "sorting/bubble-sort": BubbleSortModule,
   "sorting/insertion-sort": InsertionSortModule,
+  "sorting/selection-sort": SelectionSortModule,
 };
